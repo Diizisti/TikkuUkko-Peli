@@ -9,7 +9,10 @@ const MAX_JUMPS     = 2 # 1 in ground and 1 in air
 
 var motion := Vector2()
 var is_crouching = false
-var jumps_left = 2 # hyppääminen miinustaa ja maahan koskeminen laitaa takas kahdeksi, tupla hyppy.
+var jumps_left = MAX_JUMPS # hyppääminen miinustaa ja maahan koskeminen laitaa takas kahdeksi, tupla hyppy.
+
+func _ready():
+	modulate = Globals.player_color
 
 func _play_animation(anim:String):
 	if $sprite.animation != anim: # Älä vaihda samaan animaation, jos se onjo pyörimäs.
