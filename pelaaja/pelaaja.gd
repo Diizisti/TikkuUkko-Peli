@@ -67,3 +67,8 @@ func _physics_process(delta):
 		motion.y = -JUMP_STRENGTH
 	# Liiku
 	motion = move_and_slide(motion, Vector2.UP)
+
+# kill the player
+func die():
+	Globals.death_count += 1
+	get_tree().reload_current_scene()
