@@ -36,6 +36,7 @@ window/size/height=720
 
 [gui]
 
+theme/custom="res://assets/theme.tres"
 theme/custom_font="res://assets/medium.tres"
 
 [input]
