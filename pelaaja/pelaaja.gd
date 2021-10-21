@@ -70,5 +70,8 @@ func _physics_process(delta):
 
 # kill the player
 func die():
+	# Jos pelaaja ei oo näkyvillä niin unoha :D, portaali pistää pelaajan näkymättömäks.
+	if !visible:
+		return
 	Globals.death_count += 1
 	get_tree().reload_current_scene()
