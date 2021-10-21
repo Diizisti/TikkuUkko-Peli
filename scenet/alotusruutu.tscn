@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenet/alotusruutu.gd" type="Script" id=1]
 [ext_resource path="res://pelaaja/pelaaja.png" type="Texture" id=2]
+[ext_resource path="res://assets/large.tres" type="DynamicFont" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -17,43 +18,43 @@ region = Rect2( 128, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
-region = Rect2( 512, 0, 64, 96 )
+region = Rect2( 576, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
-region = Rect2( 192, 0, 64, 96 )
+region = Rect2( 512, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
-region = Rect2( 256, 0, 64, 96 )
+region = Rect2( 448, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 320, 0, 64, 96 )
+region = Rect2( 192, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 384, 0, 64, 96 )
+region = Rect2( 256, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 640, 0, 64, 96 )
+region = Rect2( 320, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 704, 0, 64, 96 )
+region = Rect2( 384, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 768, 0, 64, 96 )
+region = Rect2( 640, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 448, 0, 64, 96 )
+region = Rect2( 704, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
-region = Rect2( 576, 0, 64, 96 )
+region = Rect2( 768, 0, 64, 96 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
@@ -64,27 +65,27 @@ animations = [ {
 }, {
 "frames": [ SubResource( 4 ) ],
 "loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ) ],
+"loop": true,
 "name": "falling",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "running",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "crouch_walk",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 6 ) ],
 "loop": true,
 "name": "jumping",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
-"name": "crouch",
+"name": "running",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "crouch_walk",
 "speed": 5.0
 } ]
 
@@ -97,83 +98,93 @@ __meta__ = {
 }
 
 [node name="peliin" type="Button" parent="."]
-anchor_left = 0.375
-anchor_top = 0.278
-anchor_right = 0.631
-anchor_bottom = 0.367
-margin_left = -8.00003
-margin_top = -0.160019
+anchor_left = 0.669
+anchor_top = 0.689
+anchor_right = 0.931
+anchor_bottom = 0.778
+margin_left = -0.320068
+margin_top = -0.0800171
 margin_right = 0.319946
-margin_bottom = -0.240021
+margin_bottom = -0.160034
 text = "Pelaa"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="peliin2" type="Button" parent="."]
-anchor_left = 0.394
-anchor_top = 0.444
-anchor_right = 0.612
-anchor_bottom = 0.533
-margin_left = -0.320038
-margin_top = 0.319977
-margin_right = 0.639954
-margin_bottom = 0.23996
+[node name="poistu" type="Button" parent="."]
+anchor_left = 0.694
+anchor_top = 0.822
+anchor_right = 0.906
+anchor_bottom = 0.889
+margin_left = -0.320007
+margin_top = 0.159973
+margin_right = 0.319946
+margin_bottom = -0.0800171
 text = "Poistu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 351.026, 389.489 )
+position = Vector2( 264, 440 )
+rotation = 0.0872665
 scale = Vector2( 5, 5 )
 frames = SubResource( 14 )
 animation = "running"
-frame = 2
+frame = 3
 playing = true
 
-[node name="Label" type="Label" parent="."]
+[node name="title" type="Label" parent="."]
+anchor_top = 0.1
 anchor_right = 1.0
 anchor_bottom = 0.267
-margin_bottom = -72.24
-text = "THE JUMPING GAME!"
+margin_bottom = -0.23999
+custom_fonts/font = ExtResource( 3 )
+text = "TIKKU-UKKO PELI"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="r" type="HSlider" parent="."]
-margin_left = 51.349
-margin_top = 155.991
-margin_right = 359.349
-margin_bottom = 183.991
+margin_left = 315.464
+margin_top = 584.0
+margin_right = 623.464
+margin_bottom = 612.0
 min_value = 0.05
 max_value = 0.99
 step = 0.01
-value = 0.05
+value = 0.99
+tick_count = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="g" type="HSlider" parent="."]
-margin_left = 49.1452
-margin_top = 187.489
-margin_right = 357.145
-margin_bottom = 215.489
+margin_left = 313.26
+margin_top = 615.498
+margin_right = 621.26
+margin_bottom = 643.498
 min_value = 0.05
 max_value = 0.99
 step = 0.01
-value = 0.05
+value = 0.99
 
 [node name="b" type="HSlider" parent="."]
-margin_left = 47.8853
-margin_top = 219.617
-margin_right = 355.885
-margin_bottom = 247.617
+margin_left = 312.0
+margin_top = 647.626
+margin_right = 620.0
+margin_bottom = 675.626
 min_value = 0.05
 max_value = 0.99
 step = 0.01
-value = 0.05
+value = 0.99
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="peliin" to="." method="_on_peliin_pressed"]
-[connection signal="pressed" from="peliin2" to="." method="_on_peliin_pressed"]
+[connection signal="pressed" from="poistu" to="." method="_on_peliin_pressed"]
 [connection signal="value_changed" from="r" to="." method="_update_player_color"]
 [connection signal="value_changed" from="g" to="." method="_update_player_color"]
 [connection signal="value_changed" from="b" to="." method="_update_player_color"]
