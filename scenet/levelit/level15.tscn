@@ -26,7 +26,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 928, 608 )
-next_level_path = "res://scenet/alotusruutu.tscn"
+next_level_path = "res://scenet/lopetusruutu.tscn"
 
 [node name="spikes3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 224, 256 )

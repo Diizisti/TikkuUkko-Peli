@@ -20,7 +20,7 @@ func stop_timer():
 	visible = false
 
 func get_time():
-	return "Timer: %s:%s.%s" % [m, str(s).pad_zeros(2), str(ms).pad_zeros(2)]
+	return "%s:%s.%s" % [m, str(s).pad_zeros(2), str(ms).pad_zeros(2)]
 
 func update_timer(delta:float):
 	# Älä päivitä ajastinta jos ei ole näkyvillä.
@@ -40,7 +40,7 @@ func update_timer(delta:float):
 		m += 1
 	
 	# Päivitä ajastimen teksti.
-	$timer.text = get_time()
+	$timer.text = "Timer: " + get_time()
 
 func update_deathcount():
 	$death_count.text = "Deaths: %s" % [Globals.death_count]

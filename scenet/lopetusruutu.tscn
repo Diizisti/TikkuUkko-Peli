@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/large.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenet/lopetusruutu.gd" type="Script" id=2]
+
+[node name="loptusruutu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stats" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -252.0
+margin_top = -104.0
+margin_right = 252.0
+margin_bottom = 104.0
+custom_fonts/font = ExtResource( 1 )
+text = "Aikasi: x
+Kuolemasi: x"
+valign = 1
+
+[node name="alkuun" type="Button" parent="."]
+anchor_left = 0.425
+anchor_top = 0.711
+anchor_right = 0.569
+anchor_bottom = 0.765
+margin_top = 0.0799866
+margin_right = -0.320007
+margin_bottom = 0.199951
+text = "Alkuun"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="alkuun" to="." method="_alkuun"]
