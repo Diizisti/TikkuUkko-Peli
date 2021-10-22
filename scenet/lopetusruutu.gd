@@ -14,5 +14,5 @@ func _physics_process(delta):
 		get_tree().quit()
 
 # Takaisin Alotusruutuun.
-func _alkuun():
+func _alkuun_pressed():
 	get_tree().change_scene("res://scenet/alotusruutu.tscn")

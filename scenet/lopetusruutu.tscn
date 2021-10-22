@@ -37,4 +37,4 @@ text = "Alkuun"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_up" from="alkuun" to="." method="_alkuun"]
+[connection signal="button_up" from="alkuun" to="." method="_alkuun_pressed"]
