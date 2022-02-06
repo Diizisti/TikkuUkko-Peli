@@ -22,39 +22,39 @@ region = Rect2( 576, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
-region = Rect2( 640, 0, 64, 96 )
+region = Rect2( 512, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
-region = Rect2( 704, 0, 64, 96 )
+region = Rect2( 448, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 768, 0, 64, 96 )
+region = Rect2( 640, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 192, 0, 64, 96 )
+region = Rect2( 704, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 256, 0, 64, 96 )
+region = Rect2( 768, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 320, 0, 64, 96 )
+region = Rect2( 192, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 384, 0, 64, 96 )
+region = Rect2( 256, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 448, 0, 64, 96 )
+region = Rect2( 320, 0, 64, 96 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
-region = Rect2( 512, 0, 64, 96 )
+region = Rect2( 384, 0, 64, 96 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
@@ -68,25 +68,25 @@ animations = [ {
 "name": "crouch",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 5 ) ],
 "loop": true,
-"name": "crouch_walk",
+"name": "falling",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "running",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 6 ) ],
 "loop": true,
 "name": "jumping",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "falling",
+"name": "crouch_walk",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "running",
+"speed": 10.0
 } ]
 
 [node name="alotusruutu" type="Control"]
@@ -131,7 +131,7 @@ rotation = 0.0872665
 scale = Vector2( 5, 5 )
 frames = SubResource( 14 )
 animation = "running"
-frame = 1
+frame = 3
 playing = true
 
 [node name="title" type="Label" parent="."]
@@ -140,7 +140,7 @@ anchor_right = 1.0
 anchor_bottom = 0.267
 margin_bottom = -0.23999
 custom_fonts/font = ExtResource( 3 )
-text = "A GENEREIC JUMP GAME!"
+text = "HyppelyPeli"
 align = 1
 valign = 1
 __meta__ = {
@@ -161,9 +161,9 @@ __meta__ = {
 }
 
 [node name="r" type="HSlider" parent="sliders"]
-margin_top = 18.0
-margin_right = 344.0
-margin_bottom = 34.0
+margin_top = 17.0
+margin_right = 343.0
+margin_bottom = 33.0
 min_value = 0.05
 max_value = 0.99
 step = 0.01
@@ -174,18 +174,18 @@ __meta__ = {
 }
 
 [node name="g" type="HSlider" parent="sliders"]
-margin_top = 44.0
-margin_right = 344.0
-margin_bottom = 60.0
+margin_top = 43.0
+margin_right = 343.0
+margin_bottom = 59.0
 min_value = 0.05
 max_value = 0.99
 step = 0.01
 value = 0.99
 
 [node name="b" type="HSlider" parent="sliders"]
-margin_top = 70.0
-margin_right = 344.0
-margin_bottom = 86.0
+margin_top = 69.0
+margin_right = 343.0
+margin_bottom = 85.0
 min_value = 0.05
 max_value = 0.99
 step = 0.01
