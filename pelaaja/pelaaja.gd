@@ -75,7 +75,6 @@ func _physics_process(delta):
 		Gui.stop_timer()
 		get_tree().change_scene("res://scenet/alotusruutu.tscn")
 
-
 # kill the player
 func die():
 	# Jos pelaaja ei oo näkyvillä niin unoha :D, portaali pistää pelaajan näkymättömäks.
